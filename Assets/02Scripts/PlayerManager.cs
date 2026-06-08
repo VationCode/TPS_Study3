@@ -26,9 +26,10 @@ public class PlayerManager : MonoBehaviour
 
     [Header(" IK "), SerializeField]
     private Rig _handRig;
-
     [SerializeField]
     private Rig _aimRig;
+
+    private Enemy _enemy;
     private void Awake()
     {
         _input = GetComponent<StarterAssetsInputs>();
@@ -80,6 +81,8 @@ public class PlayerManager : MonoBehaviour
             {
                 targetPos = hit.point;
                 _aimObj.transform.position = hit.point;
+
+                _enemy = hit.collider.gameObject.GetComponent<Enemy>();
             }
             else
             {
@@ -98,7 +101,7 @@ public class PlayerManager : MonoBehaviour
             if (_input.IsShoot)
             {
                 _anim.SetBool("Shoot", true);
-                GameManager.Instance.Shooting(targetPos);
+                GameManager.Instance.Shooting(targetPos, _enemy);
             }
             else
             {
