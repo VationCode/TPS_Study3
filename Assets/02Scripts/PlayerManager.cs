@@ -1,15 +1,15 @@
 using UnityEngine;
 using StarterAssets;
 using Unity.Cinemachine;
-using UnityEngine.UI;
+using UnityEngine.Animations.Rigging;
 
 public class PlayerManager : MonoBehaviour
 {
     private StarterAssetsInputs _input;
     private ThirdPersonController _thirdPersonCtrl;
+    private Animator _anim;
 
-
-    [Header("Aim"), SerializeField]
+    [Header("IsAim"), SerializeField]
     private CinemachineVirtualCamera _aimCam;
 
     [SerializeField]
@@ -23,10 +23,17 @@ public class PlayerManager : MonoBehaviour
     
     [SerializeField]
     private LayerMask _targetLayer;
+
+    [Header(" IK "), SerializeField]
+    private Rig _handRig;
+
+    [SerializeField]
+    private Rig _aimRig;
     private void Awake()
     {
         _input = GetComponent<StarterAssetsInputs>();
         _thirdPersonCtrl = GetComponent<ThirdPersonController>();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     void Start()
@@ -41,9 +48,29 @@ public class PlayerManager : MonoBehaviour
 
     private void AimCheck()
     {
-        if (_input.aim)
+        if(_input.IsReload)
+        {
+            _input.IsReload = false;
+
+            if (_thirdPersonCtrl.IsReload) return;
+
+            AimControll(false);
+            SetRigWeight(0);
+            _anim.SetLayerWeight(1,1);
+            _anim.SetTrigger("Reload");
+            _thirdPersonCtrl.IsReload = true;
+        }
+
+        if(_thirdPersonCtrl.IsReload)
+        {
+            return;
+        }
+
+        if (_input.IsAim)
         {
             AimControll(true);
+
+            _anim.SetLayerWeight(1,1);
 
             Transform camTr = Camera.main.transform;
             RaycastHit hit;
@@ -66,10 +93,25 @@ public class PlayerManager : MonoBehaviour
 
             transform.forward = Vector3.Lerp(transform.forward, aimDir, Time.deltaTime * _aimRotSpeed);
 
+            SetRigWeight(1);
+
+            if (_input.IsShoot)
+            {
+                _anim.SetBool("Shoot", true);
+                GameManager.Instance.Shooting(targetPos);
+            }
+            else
+            {
+                _anim.SetBool("Shoot", false);
+            }
+
         }
         else
         {
             AimControll(false);
+            SetRigWeight(0);
+            _anim.SetLayerWeight(1, 0);
+            _anim.SetBool("Shoot", false);
         }
     }
 
@@ -81,6 +123,18 @@ public class PlayerManager : MonoBehaviour
             _aimImgs[i].SetActive(p_isCheck);
         }
         _thirdPersonCtrl.IsAimMove = p_isCheck;
+    }
 
+    public void Reload()
+    {
+        _thirdPersonCtrl.IsReload = false;
+        SetRigWeight(1);
+        _anim.SetLayerWeight(1,0);
+    }
+
+    private void SetRigWeight(float p_weight)
+    {
+        _aimRig.weight = p_weight;
+        _handRig.weight = p_weight;
     }
 }

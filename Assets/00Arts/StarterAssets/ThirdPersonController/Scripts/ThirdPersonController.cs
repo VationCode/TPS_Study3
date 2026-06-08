@@ -127,19 +127,10 @@ namespace StarterAssets
         }
 
         //
-        public bool IsAimMove
-        {
-            get
-            {
-                return _isAimMove;
-            }
-            set
-            {
-                _isAimMove = value;
-            }
-        }
+        public bool IsAimMove = false;
+        public bool IsReload = false;
 
-        private bool _isAimMove;
+
         private void Awake()
         {
             // get a reference to our main camera
@@ -147,13 +138,16 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+            
         }
 
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
 
-            _hasAnimator = TryGetComponent(out _animator);
+            //_hasAnimator = TryGetComponent(out _animator);
+            _animator = GetComponentInChildren<Animator>();
+            _hasAnimator = _animator != null;
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM 
@@ -171,8 +165,9 @@ namespace StarterAssets
 
         private void Update()
         {
-            _hasAnimator = TryGetComponent(out _animator);
-
+            //_hasAnimator = TryGetComponent(out _animator);
+            _hasAnimator = _animator != null;
+            if(!_hasAnimator) _animator = GetComponentInChildren<Animator>();
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -234,7 +229,7 @@ namespace StarterAssets
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
             //
-            if (_isAimMove)
+            if (IsAimMove || IsReload)
             {
                 targetSpeed = MoveSpeed;
             }
@@ -285,7 +280,7 @@ namespace StarterAssets
 
                 // rotate to face input direction relative to camera position
                 //
-                if (!_isAimMove)
+                if (!IsAimMove)
                 {
                     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
                 }
