@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
     private int _currentBullet = 0;
 
     [Header("Weapon FX"), SerializeField]
-    private GameObject _muzzleFlashFX;
+    private ParticleSystem _muzzleFlashFX;
     [SerializeField]
     private Transform _muzzleFlashPos;
     [SerializeField]
-    private GameObject _shellEjectEffectFX;
+    private ParticleSystem _shellEjectEffectFX;
     [SerializeField]
     private Transform _shellEjectPos;
 
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         _bulletTMP.text = _currentBullet + " / " + _maxBullet;
     }
 
-    public void Shooting(Vector3 p_targetPos, Enemy p_enemy)
+    public void Shooting(Vector3 p_targetPos, Enemy p_enemy, AudioSource p_audio, AudioClip p_clip)
     {
         _currentShootTimer += Time.deltaTime;
         if (_currentShootTimer < _maxShootDelay || _currentBullet <= 0) return;
@@ -52,18 +52,22 @@ public class GameManager : MonoBehaviour
         _currentShootTimer = 0;
         Vector3 aimDir = (p_targetPos - _firePos.position).normalized;
 
-        GameObject muzzleFX = PoolManager.Instance.ActivateObj(1);
+        /*GameObject muzzleFX = PoolManager.Instance.ActivateObj(1);
         SetObjPosition(muzzleFX, _firePos);
         muzzleFX.transform.rotation = Quaternion.LookRotation(aimDir, Vector3.up);
 
         GameObject shellEjectFX = PoolManager.Instance.ActivateObj(2);
         SetObjPosition(shellEjectFX, _firePos);
-        shellEjectFX.transform.rotation = Quaternion.LookRotation(aimDir, Vector3.up);
+        shellEjectFX.transform.rotation = Quaternion.LookRotation(aimDir, Vector3.up);*/
+        _muzzleFlashFX.Play();
+        _shellEjectEffectFX.Play();
+
 
         GameObject prefabToSpawn = PoolManager.Instance.ActivateObj(0);
         SetObjPosition(prefabToSpawn, _firePos);
         prefabToSpawn.transform.rotation = Quaternion.LookRotation(aimDir, Vector3.up);
 
+        p_audio.PlayOneShot(p_clip);
         /*if(p_enemy != null && p_enemy.EnemyCurrentHP > 0)
         {
             p_enemy.EnemyCurrentHP -= 1;
@@ -72,7 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void ReloadClip()
     {
-        
+        InitBullet();
     }
 
     private void InitBullet()

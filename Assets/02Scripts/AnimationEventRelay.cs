@@ -13,4 +13,12 @@ public class AnimationEventRelay : MonoBehaviour
     {
         _playerManager.Reload();
     }
+    public void OnReloadInsertSound()
+    {
+        _playerManager.ReloadInsertClip();
+    }
+    public void OnReloadRemoveSound()
+    {
+        _playerManager.ReloadSound();
+    }
 }

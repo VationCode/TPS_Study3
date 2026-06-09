@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: f4faf13260592aa4e95cbd150697d822
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246378
+  packageName: Cosmo Collection
+  packageVersion: 2.0
+  assetPath: Assets/IdaFaber/Meshes/Girl/SK_CosmoSuccubusGirl_with_jacket.fbx
+  uploadId: 822212
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -121,8 +128,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -187,7 +192,7 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human:
-    - boneName: pelvis
+    - boneName: root
       humanName: Hips
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -251,7 +256,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: spine_04
+    - boneName: spine_02
       humanName: Chest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -403,7 +408,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: index_01_l
+    - boneName: index_metacarpal_l
       humanName: Left Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -411,7 +416,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: index_02_l
+    - boneName: index_01_l
       humanName: Left Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -419,7 +424,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: index_03_l
+    - boneName: index_02_l
       humanName: Left Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -427,7 +432,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: middle_01_l
+    - boneName: middle_metacarpal_l
       humanName: Left Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -435,7 +440,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: middle_02_l
+    - boneName: middle_01_l
       humanName: Left Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -443,7 +448,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: middle_03_l
+    - boneName: middle_02_l
       humanName: Left Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -451,7 +456,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ring_01_l
+    - boneName: ring_metacarpal_l
       humanName: Left Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -459,7 +464,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ring_02_l
+    - boneName: ring_01_l
       humanName: Left Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -467,7 +472,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ring_03_l
+    - boneName: ring_02_l
       humanName: Left Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -475,7 +480,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: pinky_01_l
+    - boneName: pinky_metacarpal_l
       humanName: Left Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -483,7 +488,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: pinky_02_l
+    - boneName: pinky_01_l
       humanName: Left Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -491,7 +496,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: pinky_03_l
+    - boneName: pinky_02_l
       humanName: Left Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -523,7 +528,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: index_01_r
+    - boneName: index_metacarpal_r
       humanName: Right Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -531,7 +536,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: index_02_r
+    - boneName: index_01_r
       humanName: Right Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -539,7 +544,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: index_03_r
+    - boneName: index_02_r
       humanName: Right Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -547,7 +552,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: middle_01_r
+    - boneName: middle_metacarpal_r
       humanName: Right Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -555,7 +560,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: middle_02_r
+    - boneName: middle_01_r
       humanName: Right Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -563,7 +568,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: middle_03_r
+    - boneName: middle_02_r
       humanName: Right Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -571,7 +576,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ring_01_r
+    - boneName: ring_metacarpal_r
       humanName: Right Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -579,7 +584,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ring_02_r
+    - boneName: ring_01_r
       humanName: Right Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -587,7 +592,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ring_03_r
+    - boneName: ring_02_r
       humanName: Right Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -595,7 +600,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: pinky_01_r
+    - boneName: pinky_metacarpal_r
       humanName: Right Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -603,7 +608,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: pinky_02_r
+    - boneName: pinky_01_r
       humanName: Right Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -611,7 +616,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: pinky_03_r
+    - boneName: pinky_02_r
       humanName: Right Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -619,7 +624,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: spine_05
+    - boneName: spine_04
       humanName: UpperChest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -628,42 +633,17 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: SK_CosmoSuccubusGirl_AllPartsTogether(Clone)
+    - name: SK_CosmoSuccubusGirl_with_jacket(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Body
-      parentName: SK_CosmoSuccubusGirl_AllPartsTogether(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_FULL
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_01
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_02
-      parentName: Body
+      parentName: SK_CosmoSuccubusGirl_with_jacket(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: SK_CSG_BODY_PART_03
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_04
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_05
       parentName: Body
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
@@ -673,33 +653,8 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_07
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_08
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_09
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_10
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: SK_CSG_BODY_PART_11
-      parentName: Body
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: Clothes
-      parentName: SK_CosmoSuccubusGirl_AllPartsTogether(Clone)
+      parentName: SK_CosmoSuccubusGirl_with_jacket(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -759,7 +714,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Hair
-      parentName: SK_CosmoSuccubusGirl_AllPartsTogether(Clone)
+      parentName: SK_CosmoSuccubusGirl_with_jacket(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -774,7 +729,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Head
-      parentName: SK_CosmoSuccubusGirl_AllPartsTogether(Clone)
+      parentName: SK_CosmoSuccubusGirl_with_jacket(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -809,7 +764,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: root
-      parentName: SK_CosmoSuccubusGirl_AllPartsTogether(Clone)
+      parentName: SK_CosmoSuccubusGirl_with_jacket(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
@@ -836,7 +791,7 @@ ModelImporter:
     - name: ik_hand_gun
       parentName: ik_hand_root
       position: {x: 0.42556715, y: 0.01394714, z: 1.0984755}
-      rotation: {x: 0.6083674, y: 0.17933679, z: -0.4612589, w: 0.6204576}
+      rotation: {x: 0.6083674, y: 0.1793368, z: -0.4612589, w: 0.62045765}
       scale: {x: 1, y: 1, z: 1}
     - name: ik_hand_l
       parentName: ik_hand_gun
@@ -926,7 +881,7 @@ ModelImporter:
     - name: lowerarm_l
       parentName: upperarm_l
       position: {x: -0.24381919, y: 0.00000030857043, z: 0.0000026596983}
-      rotation: {x: -0.115306914, y: 0.018473318, z: 0.035976797, w: 0.99250627}
+      rotation: {x: -0.115306936, y: 0.018473318, z: 0.03597681, w: 0.99250627}
       scale: {x: 1, y: 1, z: 1}
     - name: hand_l
       parentName: lowerarm_l
@@ -936,17 +891,17 @@ ModelImporter:
     - name: index_metacarpal_l
       parentName: hand_l
       position: {x: -0.030611431, y: -0.008020867, z: -0.00638532}
-      rotation: {x: -0.21172024, y: 0.20718557, z: 0.045078952, w: 0.95405275}
+      rotation: {x: -0.19987658, y: 0.16675495, z: 0.0974986, w: 0.9605916}
       scale: {x: 1, y: 1, z: 1}
     - name: index_01_l
       parentName: index_metacarpal_l
       position: {x: -0.047533378, y: -0.0000010360393, z: -0.00000042736878}
-      rotation: {x: 0.04564519, y: 0.039521694, z: -0.011318344, w: 0.9981115}
+      rotation: {x: 0.042248666, y: 0.02172373, z: -0.029836126, w: 0.99842525}
       scale: {x: 1, y: 1, z: 1}
     - name: index_02_l
       parentName: index_01_l
       position: {x: -0.04498426, y: -0.0000023853147, z: -0.00000037092312}
-      rotation: {x: 0.00094010634, y: 0.0009345147, z: -0.035758846, w: 0.9993596}
+      rotation: {x: 0.00094070623, y: 0.0009316389, z: -0.03576185, w: 0.9993595}
       scale: {x: 1, y: 1, z: 1}
     - name: index_03_l
       parentName: index_02_l
@@ -956,17 +911,17 @@ ModelImporter:
     - name: middle_metacarpal_l
       parentName: hand_l
       position: {x: -0.022379005, y: -0.00636997, z: 0.006940876}
-      rotation: {x: -0.15531792, y: 0.28513297, z: 0.05584712, w: 0.9441698}
+      rotation: {x: -0.13629532, y: 0.19351728, z: 0.112280875, w: 0.96507394}
       scale: {x: 1, y: 1, z: 1}
     - name: middle_01_l
       parentName: middle_metacarpal_l
       position: {x: -0.046016283, y: 0.000000225352, z: 0.000000001088684}
-      rotation: {x: 0.0075019263, y: -0.031796187, z: -0.04428498, w: 0.99848473}
+      rotation: {x: 0.01499475, y: 0.0048863124, z: -0.03341237, w: 0.9993172}
       scale: {x: 1, y: 1, z: 1}
     - name: middle_02_l
       parentName: middle_01_l
       position: {x: -0.047936123, y: -0.0000005928585, z: -0.000000005747942}
-      rotation: {x: -0.001191402, y: -0.0056283693, z: -0.029215747, w: 0.99955666}
+      rotation: {x: -0.0011914711, y: -0.0056260834, z: -0.029210739, w: 0.9995568}
       scale: {x: 1, y: 1, z: 1}
     - name: middle_03_l
       parentName: middle_02_l
@@ -976,17 +931,17 @@ ModelImporter:
     - name: pinky_metacarpal_l
       parentName: hand_l
       position: {x: -0.003435427, y: 0.006899472, z: 0.028585326}
-      rotation: {x: -0.12752573, y: 0.35606554, z: -0.057223056, w: 0.92394805}
+      rotation: {x: -0.08484418, y: 0.18840973, z: 0.098207146, w: 0.9734776}
       scale: {x: 1, y: 1, z: 1}
     - name: pinky_01_l
       parentName: pinky_metacarpal_l
       position: {x: -0.04339416, y: -0.00000057676505, z: -0.000000028483148}
-      rotation: {x: -0.03608303, y: -0.121450484, z: 0.050894927, w: 0.9906349}
+      rotation: {x: -0.011652165, y: -0.0063713156, z: -0.03351119, w: 0.9993502}
       scale: {x: 1, y: 1, z: 1}
     - name: pinky_02_l
       parentName: pinky_01_l
       position: {x: -0.03479102, y: 0.00000009076163, z: 0.000000090722686}
-      rotation: {x: 0.004118646, y: -0.0035459085, z: -0.030015467, w: 0.9995346}
+      rotation: {x: 0.0041190186, y: -0.0035495663, z: -0.030009136, w: 0.99953485}
       scale: {x: 1, y: 1, z: 1}
     - name: pinky_03_l
       parentName: pinky_02_l
@@ -996,17 +951,17 @@ ModelImporter:
     - name: ring_metacarpal_l
       parentName: hand_l
       position: {x: -0.014295101, y: 0.0019918573, z: 0.018160364}
-      rotation: {x: -0.11399341, y: 0.34351724, z: 0.028251208, w: 0.93177426}
+      rotation: {x: -0.08436007, y: 0.20018321, z: 0.10955927, w: 0.969952}
       scale: {x: 1, y: 1, z: 1}
     - name: ring_01_l
       parentName: ring_metacarpal_l
       position: {x: -0.04421643, y: 0.000004226557, z: -0.00000066470966}
-      rotation: {x: -0.041749544, y: -0.100104004, z: -0.036416907, w: 0.9934335}
+      rotation: {x: -0.017514125, y: -0.0046846992, z: -0.030364828, w: 0.99937445}
       scale: {x: 1, y: 1, z: 1}
     - name: ring_02_l
       parentName: ring_01_l
       position: {x: -0.042505797, y: -0.0000014044184, z: 0.0000001454819}
-      rotation: {x: 0.0028351792, y: -0.004233716, z: -0.030777194, w: 0.99951327}
+      rotation: {x: 0.002835316, y: -0.004235953, z: -0.030773701, w: 0.99951345}
       scale: {x: 1, y: 1, z: 1}
     - name: ring_03_l
       parentName: ring_02_l
@@ -1016,12 +971,12 @@ ModelImporter:
     - name: thumb_01_l
       parentName: hand_l
       position: {x: -0.018568147, y: 0.004776229, z: -0.019133406}
-      rotation: {x: 0.44257087, y: -0.07658788, z: 0.13880062, w: 0.8826096}
+      rotation: {x: 0.4127536, y: -0.13836099, z: 0.22502421, w: 0.8716966}
       scale: {x: 1, y: 1, z: 1}
     - name: thumb_02_l
       parentName: thumb_01_l
       position: {x: -0.045384187, y: -0.000342004, z: -0.000111096415}
-      rotation: {x: 0.0030238614, y: 0.012536632, z: -0.022675376, w: 0.9996598}
+      rotation: {x: 0.0030239502, y: 0.012537001, z: -0.022676533, w: 0.9996597}
       scale: {x: 1, y: 1, z: 1}
     - name: thumb_03_l
       parentName: thumb_02_l
@@ -1051,7 +1006,7 @@ ModelImporter:
     - name: clavicle_r
       parentName: spine_05
       position: {x: -0.07578186, y: -0.023245959, z: 0.017595308}
-      rotation: {x: 0.69380116, y: 0.1365279, z: 0.70083314, w: 0.09398326}
+      rotation: {x: 0.6938012, y: 0.13652791, z: 0.7008332, w: 0.09398327}
       scale: {x: 1, y: 1, z: 1}
     - name: upperarm_r
       parentName: clavicle_r
@@ -1071,17 +1026,17 @@ ModelImporter:
     - name: index_metacarpal_r
       parentName: hand_r
       position: {x: 0.030605301, y: 0.008025534, z: 0.006388114}
-      rotation: {x: -0.21172024, y: 0.20718557, z: 0.045078952, w: 0.95405275}
+      rotation: {x: -0.19986895, y: 0.16673715, z: 0.09753445, w: 0.9605926}
       scale: {x: 1, y: 1, z: 1}
     - name: index_01_r
       parentName: index_metacarpal_r
       position: {x: 0.04753506, y: 0, z: -1.4210854e-16}
-      rotation: {x: 0.045645677, y: 0.039510574, z: -0.011281332, w: 0.9981123}
+      rotation: {x: 0.042247463, y: 0.021720367, z: -0.029821053, w: 0.99842584}
       scale: {x: 1, y: 1, z: 1}
     - name: index_02_r
       parentName: index_01_r
       position: {x: 0.044989847, y: 7.105427e-16, z: -7.105427e-17}
-      rotation: {x: 0.0009406948, y: 0.0009402217, z: -0.035807427, w: 0.9993579}
+      rotation: {x: 0.0009405121, y: 0.00093938335, z: -0.035804465, w: 0.99935794}
       scale: {x: 1, y: 1, z: 1}
     - name: index_03_r
       parentName: index_02_r
@@ -1091,17 +1046,17 @@ ModelImporter:
     - name: middle_metacarpal_r
       parentName: hand_r
       position: {x: 0.022377474, y: 0.0063710106, z: -0.006940093}
-      rotation: {x: -0.15531792, y: 0.28513297, z: 0.05584712, w: 0.9441698}
+      rotation: {x: -0.13628793, y: 0.19350669, z: 0.1123027, w: 0.9650746}
       scale: {x: 1, y: 1, z: 1}
     - name: middle_01_r
       parentName: middle_metacarpal_r
       position: {x: 0.046016574, y: 8.5265126e-16, z: -2.0428103e-16}
-      rotation: {x: 0.00750106, y: -0.031799965, z: -0.044268426, w: 0.9984853}
+      rotation: {x: 0.014994808, y: 0.0048860884, z: -0.033403255, w: 0.9993175}
       scale: {x: 1, y: 1, z: 1}
     - name: middle_02_r
       parentName: middle_01_r
       position: {x: 0.047936633, y: -2.842171e-16, z: -2.3314683e-17}
-      rotation: {x: -0.0011922369, y: -0.005623858, z: -0.02921763, w: 0.9995566}
+      rotation: {x: -0.0011919205, y: -0.005624883, z: -0.029217977, w: 0.99955654}
       scale: {x: 1, y: 1, z: 1}
     - name: middle_03_r
       parentName: middle_02_r
@@ -1111,17 +1066,17 @@ ModelImporter:
     - name: pinky_metacarpal_r
       parentName: hand_r
       position: {x: 0.0034300163, y: -0.0068951063, z: -0.028582908}
-      rotation: {x: -0.12752573, y: 0.35606554, z: -0.057223056, w: 0.92394805}
+      rotation: {x: -0.084834665, y: 0.18840213, z: 0.09824124, w: 0.97347647}
       scale: {x: 1, y: 1, z: 1}
     - name: pinky_01_r
       parentName: pinky_metacarpal_r
       position: {x: 0.04339408, y: 0, z: -1.4210854e-16}
-      rotation: {x: -0.036082543, y: -0.121454015, z: 0.050904427, w: 0.99063396}
+      rotation: {x: -0.011652463, y: -0.006370928, z: -0.03351772, w: 0.99934995}
       scale: {x: 1, y: 1, z: 1}
     - name: pinky_02_r
       parentName: pinky_01_r
       position: {x: 0.034792278, y: 0, z: -1.7763568e-17}
-      rotation: {x: 0.0041179373, y: -0.0035446712, z: -0.030018685, w: 0.99953455}
+      rotation: {x: 0.0041176807, y: -0.0035479146, z: -0.030021306, w: 0.9995345}
       scale: {x: 1, y: 1, z: 1}
     - name: pinky_03_r
       parentName: pinky_02_r
@@ -1131,17 +1086,17 @@ ModelImporter:
     - name: ring_metacarpal_r
       parentName: hand_r
       position: {x: 0.014294159, y: -0.0019908643, z: -0.018159993}
-      rotation: {x: -0.11399341, y: 0.34351724, z: 0.028251208, w: 0.93177426}
+      rotation: {x: -0.084347, y: 0.20017141, z: 0.10954664, w: 0.96995705}
       scale: {x: 1, y: 1, z: 1}
     - name: ring_01_r
       parentName: ring_metacarpal_r
       position: {x: 0.04421132, y: 5.684342e-16, z: -1.9539925e-16}
-      rotation: {x: -0.041754514, y: -0.10010536, z: -0.036388513, w: 0.9934342}
+      rotation: {x: -0.017514246, y: -0.0046774116, z: -0.030296171, w: 0.9993766}
       scale: {x: 1, y: 1, z: 1}
     - name: ring_02_r
       parentName: ring_01_r
       position: {x: 0.042513832, y: -4.2632563e-16, z: -4.440892e-18}
-      rotation: {x: 0.0028363033, y: -0.0042343475, z: -0.030760575, w: 0.9995138}
+      rotation: {x: 0.0028362432, y: -0.004232868, z: -0.030758085, w: 0.99951386}
       scale: {x: 1, y: 1, z: 1}
     - name: ring_03_r
       parentName: ring_02_r
@@ -1151,12 +1106,12 @@ ModelImporter:
     - name: thumb_01_r
       parentName: hand_r
       position: {x: 0.01856734, y: -0.004775755, z: 0.019133879}
-      rotation: {x: 0.44256327, y: -0.07657342, z: 0.1387651, w: 0.8826202}
+      rotation: {x: 0.41274598, y: -0.13834769, z: 0.22500065, w: 0.8717084}
       scale: {x: 1, y: 1, z: 1}
     - name: thumb_02_r
       parentName: thumb_01_r
       position: {x: 0.04537809, y: 0.0003465541, z: 0.00011097461}
-      rotation: {x: 0.0030251723, y: 0.0125257, z: -0.022600027, w: 0.99966156}
+      rotation: {x: 0.0030251723, y: 0.0125247985, z: -0.022603476, w: 0.9996615}
       scale: {x: 1, y: 1, z: 1}
     - name: thumb_03_r
       parentName: thumb_02_r
@@ -1502,10 +1457,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 246378
-  packageName: Cosmo Collection
-  packageVersion: 2.0
-  assetPath: Assets/IdaFaber/Meshes/Girl/SK_CosmoSuccubusGirl_with_jacket.fbx
-  uploadId: 822212

@@ -29,12 +29,19 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private Rig _aimRig;
 
+    [Header("Weapon Sound"), SerializeField]
+    private AudioClip _shootSound;
+    [SerializeField]
+    private AudioClip[] _reloadSounds;
+    private AudioSource _audio;
+
     private Enemy _enemy;
     private void Awake()
     {
         _input = GetComponent<StarterAssetsInputs>();
         _thirdPersonCtrl = GetComponent<ThirdPersonController>();
         _anim = GetComponentInChildren<Animator>();
+        _audio = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -86,6 +93,8 @@ public class PlayerManager : MonoBehaviour
             }
             else
             {
+                Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f));
+
                 targetPos = camTr.position + camTr.forward * _aimObjDis;
                 _aimObj.transform.position = targetPos;
             }
@@ -101,7 +110,7 @@ public class PlayerManager : MonoBehaviour
             if (_input.IsShoot)
             {
                 _anim.SetBool("Shoot", true);
-                GameManager.Instance.Shooting(targetPos, _enemy);
+                GameManager.Instance.Shooting(targetPos, _enemy, _audio, _shootSound);
             }
             else
             {
@@ -133,11 +142,27 @@ public class PlayerManager : MonoBehaviour
         _thirdPersonCtrl.IsReload = false;
         SetRigWeight(1);
         _anim.SetLayerWeight(1,0);
-    }
+        PlayWeaponSound(_reloadSounds[2]);
 
+    }
+    public void ReloadSound()
+    {
+        PlayWeaponSound(_reloadSounds[0]);
+    }
     private void SetRigWeight(float p_weight)
     {
         _aimRig.weight = p_weight;
         _handRig.weight = p_weight;
+    }
+    public void ReloadInsertClip()
+    {
+        GameManager.Instance.ReloadClip();
+        PlayWeaponSound(_reloadSounds[1]);
+    }
+
+    private void PlayWeaponSound(AudioClip p_clip)
+    {
+        _audio.clip = p_clip;
+        _audio.Play();
     }
 }

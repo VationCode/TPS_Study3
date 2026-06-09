@@ -35,6 +35,12 @@ public class BulletManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("Enemy"))
+        {
+            if(other.gameObject.GetComponent<Enemy>().EnemyCurrentHP  > 0)
+                other.gameObject.GetComponent<Enemy>().EnemyCurrentHP -=1;
+        }
+
         gameObject.SetActive(false);
     }
 }
