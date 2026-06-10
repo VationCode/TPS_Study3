@@ -165,6 +165,8 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (GameManager.Instance.IsReady) return;
+
             //_hasAnimator = TryGetComponent(out _animator);
             _hasAnimator = _animator != null;
             if(!_hasAnimator) _animator = GetComponentInChildren<Animator>();
@@ -356,11 +358,12 @@ namespace StarterAssets
                     if (_hasAnimator)
                     {
                         _animator.SetBool(_animIDFreeFall, true);
+                        Debug.Log(_input.jump);
                     }
                 }
-
                 // if we are not grounded, do not jump
                 _input.jump = false;
+                Debug.Log("Ground Out");
             }
 
             // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)

@@ -51,6 +51,13 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.Instance.IsReady)
+        {
+            AimControll(false);
+            SetRigWeight(0);
+            return;
+        }
+
         AimCheck();
     }
 

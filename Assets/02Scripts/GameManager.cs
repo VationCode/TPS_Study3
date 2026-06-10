@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,23 +22,34 @@ public class GameManager : MonoBehaviour
     [Header("Weapon FX"), SerializeField]
     private ParticleSystem _muzzleFlashFX;
     [SerializeField]
-    private Transform _muzzleFlashPos;
-    [SerializeField]
     private ParticleSystem _shellEjectEffectFX;
+
+    [Header("Enemy")]
     [SerializeField]
-    private Transform _shellEjectPos;
+    private Transform[] _spawnPoint;
 
+    [Header("BGM")]
+    [SerializeField]
+    private AudioClip _bgmSoundClip;
+    private AudioSource _bgmAudio;
 
+    private PlayableDirector _cut;
+    public bool IsReady = true;
     private void Awake()
     {
         Instance = this;
+        _bgmAudio = GetComponent<AudioSource>();
+        _cut = GetComponent<PlayableDirector>();
+        
     }
 
     private void Start()
     {
         _currentShootTimer = 0;
         InitBullet();
+
         _bulletTMP.text = _currentBullet + " / " + _maxBullet;
+        _cut.Play();
     }
     private void Update()
     {
@@ -87,5 +100,31 @@ public class GameManager : MonoBehaviour
     private void SetObjPosition(GameObject p_obj, Transform p_targetTr)
     {
         p_obj.transform.position = p_targetTr.position;
+        p_obj.transform.rotation = p_targetTr.rotation;
+    }
+
+    IEnumerator EnemySpawn()
+    {
+        //Instantiate(_enemyObj, _spawnPoint[Random.Range(0,_spawnPoint.Length)].transform.position, Quaternion.identity);
+        GameObject enemyObj = PoolManager.Instance.ActivateObj(1);
+        SetObjPosition(enemyObj, _spawnPoint[Random.Range(0, _spawnPoint.Length)]);
+
+        yield return new WaitForSeconds(2f);
+
+        StartCoroutine(EnemySpawn());
+    }
+
+    private void PlayBGMSound()
+    {
+        _bgmAudio.clip = _bgmSoundClip;
+        _bgmAudio.loop = true;
+        _bgmAudio.Play();
+    }
+
+    public void StartGame()
+    {
+        IsReady = false;
+        PlayBGMSound();
+        StartCoroutine(EnemySpawn());
     }
 }
